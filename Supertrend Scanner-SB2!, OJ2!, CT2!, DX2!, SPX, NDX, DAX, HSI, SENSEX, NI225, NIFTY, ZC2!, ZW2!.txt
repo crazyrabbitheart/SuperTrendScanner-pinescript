@@ -1,0 +1,257 @@
+//@version=5
+indicator("Supertrend Scanner-SB2!, OJ2!, CT2!, DX2!, SPX, NDX, DAX, HSI, SENSEX, NI225, NIFTY, ZC2!, ZW2!", overlay = true)
+
+//main function
+
+s01 = 'SB2!'
+s02 = 'OJ2!'
+s03 = 'CT2!'
+s04 = 'DX2!'
+s05 = 'SPX'
+s06 = 'NDX'
+s07 = 'DAX'
+s08 = 'HSI'
+s09 = 'SENSEX'
+s10 = 'NI225'
+s11 = 'NIFTY'
+s12 = 'ZC2!'
+s13 = 'ZW2!'
+
+message = ""
+
+[s01supertrend, s01direction] = request.security(s01, "3M", ta.supertrend(3, 10))
+if s01direction < 0 and s01direction[1] > 0
+    message := message + s01 + " - chart 3M - " + "buy, "
+else if s01direction > 0 and s01direction[1] < 0
+    message := message + s01 + " - chart 3M - " + "sell, "
+    
+[s01supertrend3, s01direction3] = request.security(s01, "6M", ta.supertrend(3, 10))
+if s01direction3 < 0 and s01direction3[1] > 0
+    message := message + s01 + " - chart 6M - " + "buy, "
+else if s01direction3 > 0 and s01direction3[1] < 0
+    message := message + s01 + " - chart 6M - " + "sell, "
+
+[s01supertrend6, s01direction6] = request.security(s01, "12M", ta.supertrend(3, 10))
+if s01direction6 < 0 and s01direction6[1] > 0 
+    message := message + s01 + " - chart 12M - " + "buy, "
+else if s01direction6 > 0 and s01direction6[1] < 0 
+    message := message + s01 + " - chart 12M - " + "sell, "
+
+[s02supertrend, s02direction] = request.security(s02, "3M", ta.supertrend(3, 10))
+if s02direction < 0 and s02direction[1] > 0 
+    message := message + s02 + " - chart 3M - " + "buy, "
+else if s02direction > 0 and s02direction[1] < 0 
+    message := message + s02 + " - chart 3M - " + "sell, "
+    
+[s02supertrend3, s02direction3] = request.security(s02, "6M", ta.supertrend(3, 10))
+if s02direction3 < 0 and s02direction3[1] > 0 
+    message := message + s02 + " - chart 6M - " + "buy, "
+else if s02direction3 > 0 and s02direction3[1] < 0 
+    message := message + s02 + " - chart 6M - " + "sell, "
+
+[s02supertrend6, s02direction6] = request.security(s02, "12M", ta.supertrend(3, 10))
+if s02direction6 < 0 and s02direction6[1] > 0 
+    message := message + s02 + " - chart 12M - " + "buy, "
+else if s02direction6 > 0 and s02direction6[1] < 0 
+    message := message + s02 + " - chart 12M - " + "sell, "
+
+[s03supertrend, s03direction] = request.security(s03, "3M", ta.supertrend(3, 10))
+if s03direction < 0 and s03direction[1] > 0 
+    message := message + s03 + " - chart 3M - " + "buy, "
+else if s03direction > 0 and s03direction[1] < 0 
+    message := message + s03 + " - chart 3M - " + "sell, "
+    
+[s03supertrend3, s03direction3] = request.security(s03, "6M", ta.supertrend(3, 10))
+if s03direction3 < 0 and s03direction3[1] > 0 
+    message := message + s03 + " - chart 6M - " + "buy, "
+else if s03direction3 > 0 and s03direction3[1] < 0 
+    message := message + s03 + " - chart 6M - " + "sell, "
+
+[s03supertrend6, s03direction6] = request.security(s03, "12M", ta.supertrend(3, 10))
+if s03direction6 < 0 and s03direction6[1] > 0 
+    message := message + s03 + " - chart 12M - " + "buy, "
+else if s03direction6 > 0 and s03direction6[1] < 0 
+    message := message + s03 + " - chart 12M - " + "sell, "
+
+[s04supertrend, s04direction] = request.security(s04, "3M", ta.supertrend(3, 10))
+if s04direction < 0 and s04direction[1] > 0 
+    message := message + s04 + " - chart 3M - " + "buy, "
+else if s04direction > 0 and s04direction[1] < 0 
+    message := message + s04 + " - chart 3M - " + "sell, "
+    
+[s04supertrend3, s04direction3] = request.security(s04, "6M", ta.supertrend(3, 10))
+if s04direction3 < 0 and s04direction3[1] > 0 
+    message := message + s04 + " - chart 6M - " + "buy, "
+else if s04direction3 > 0 and s04direction3[1] < 0 
+    message := message + s04 + " - chart 6M - " + "sell, "
+
+[s04supertrend6, s04direction6] = request.security(s04, "12M", ta.supertrend(3, 10))
+if s04direction6 < 0 and s04direction6[1] > 0 
+    message := message + s04 + " - chart 12M - " + "buy, "
+else if s04direction6 > 0 and s04direction6[1] < 0 
+    message := message + s04 + " - chart 12M - " + "sell, "
+
+[s05supertrend, s05direction] = request.security(s05, "3M", ta.supertrend(3, 10))
+if s05direction < 0 and s05direction[1] > 0 
+    message := message + s05 + " - chart 3M - " + "buy, "
+else if s05direction > 0 and s05direction[1] < 0 
+    message := message + s05 + " - chart 3M - " + "sell, "
+    
+[s05supertrend3, s05direction3] = request.security(s05, "6M", ta.supertrend(3, 10))
+if s05direction3 < 0 and s05direction3[1] > 0 
+    message := message + s05 + " - chart 6M - " + "buy, "
+else if s05direction3 > 0 and s05direction3[1] < 0 
+    message := message + s05 + " - chart 6M - " + "sell, "
+
+[s05supertrend6, s05direction6] = request.security(s05, "12M", ta.supertrend(3, 10))
+if s05direction6 < 0 and s05direction6[1] > 0 
+    message := message + s05 + " - chart 12M - " + "buy, "
+else if s05direction6 > 0 and s05direction6[1] < 0 
+    message := message + s05 + " - chart 12M - " + "sell, "
+
+[s06supertrend, s06direction] = request.security(s06, "3M", ta.supertrend(3, 10))
+if s06direction < 0 and s06direction[1] > 0 
+    message := message + s06 + " - chart 3M - " + "buy, "
+else if s06direction > 0 and s06direction[1] < 0 
+    message := message + s06 + " - chart 3M - " + "sell, "
+    
+[s06supertrend3, s06direction3] = request.security(s06, "6M", ta.supertrend(3, 10))
+if s06direction3 < 0 and s06direction3[1] > 0 
+    message := message + s06 + " - chart 6M - " + "buy, "
+else if s06direction3 > 0 and s06direction3[1] < 0 
+    message := message + s06 + " - chart 6M - " + "sell, "
+
+[s06supertrend6, s06direction6] = request.security(s06, "12M", ta.supertrend(3, 10))
+if s06direction6 < 0 and s06direction6[1] > 0 
+    message := message + s06 + " - chart 12M - " + "buy, "
+else if s06direction6 > 0 and s06direction6[1] < 0 
+    message := message + s06 + " - chart 12M - " + "sell, "
+
+[s07supertrend, s07direction] = request.security(s07, "3M", ta.supertrend(3, 10))
+if s07direction < 0 and s07direction[1] > 0 
+    message := message + s07 + " - chart 3M - " + "buy, "
+else if s07direction > 0 and s07direction[1] < 0 
+    message := message + s07 + " - chart 3M - " + "sell, "
+    
+[s07supertrend3, s07direction3] = request.security(s07, "6M", ta.supertrend(3, 10))
+if s07direction3 < 0 and s07direction3[1] > 0 
+    message := message + s07 + " - chart 6M - " + "buy, "
+else if s07direction3 > 0 and s07direction3[1] < 0 
+    message := message + s07 + " - chart 6M - " + "sell, "
+
+[s07supertrend6, s07direction6] = request.security(s07, "12M", ta.supertrend(3, 10))
+if s07direction6 < 0 and s07direction6[1] > 0 
+    message := message + s07 + " - chart 12M - " + "buy, "
+else if s07direction6 > 0 and s07direction6[1] < 0 
+    message := message + s07 + " - chart 12M - " + "sell, "
+
+[s08supertrend, s08direction] = request.security(s08, "3M", ta.supertrend(3, 10))
+if s08direction < 0 and s08direction[1] > 0 
+    message := message + s08 + " - chart 3M - " + "buy, "
+else if s08direction > 0 and s08direction[1] < 0 
+    message := message + s08 + " - chart 3M - " + "sell, "
+    
+[s08supertrend3, s08direction3] = request.security(s08, "6M", ta.supertrend(3, 10))
+if s08direction3 < 0 and s08direction3[1] > 0 
+    message := message + s08 + " - chart 6M - " + "buy, "
+else if s08direction3 > 0 and s08direction3[1] < 0 
+    message := message + s08 + " - chart 6M - " + "sell, "
+
+[s08supertrend6, s08direction6] = request.security(s08, "12M", ta.supertrend(3, 10))
+if s08direction6 < 0 and s08direction6[1] > 0 
+    message := message + s08 + " - chart 12M - " + "buy, "
+else if s08direction6 > 0 and s08direction6[1] < 0 
+    message := message + s08 + " - chart 12M - " + "sell, "
+
+[s09supertrend, s09direction] = request.security(s09, "3M", ta.supertrend(3, 10))
+if s09direction < 0 and s09direction[1] > 0 
+    message := message + s09 + " - chart 3M - " + "buy, "
+else if s09direction > 0 and s09direction[1] < 0 
+    message := message + s09 + " - chart 3M - " + "sell, "
+    
+[s09supertrend3, s09direction3] = request.security(s09, "6M", ta.supertrend(3, 10))
+if s09direction3 < 0 and s09direction3[1] > 0 
+    message := message + s09 + " - chart 6M - " + "buy, "
+else if s09direction3 > 0 and s09direction3[1] < 0 
+    message := message + s09 + " - chart 6M - " + "sell, "
+
+[s09supertrend6, s09direction6] = request.security(s09, "12M", ta.supertrend(3, 10))
+if s09direction6 < 0 and s09direction6[1] > 0 
+    message := message + s09 + " - chart 12M - " + "buy, "
+else if s09direction6 > 0 and s09direction6[1] < 0 
+    message := message + s09 + " - chart 12M - " + "sell, "
+
+[s10supertrend, s10direction] = request.security(s10, "3M", ta.supertrend(3, 10))
+if s10direction < 0 and s10direction[1] > 0 
+    message := message + s10 + " - chart 3M - " + "buy, "
+else if s10direction > 0 and s10direction[1] < 0 
+    message := message + s10 + " - chart 3M - " + "sell, "
+    
+[s10supertrend3, s10direction3] = request.security(s10, "6M", ta.supertrend(3, 10))
+if s10direction3 < 0 and s10direction3[1] > 0 
+    message := message + s10 + " - chart 6M - " + "buy, "
+else if s10direction3 > 0 and s10direction3[1] < 0 
+    message := message + s10 + " - chart 6M - " + "sell, "
+
+[s10supertrend6, s10direction6] = request.security(s10, "12M", ta.supertrend(3, 10))
+if s10direction6 < 0 and s10direction6[1] > 0 
+    message := message + s10 + " - chart 12M - " + "buy, "
+else if s10direction6 > 0 and s10direction6[1] < 0 
+    message := message + s10 + " - chart 12M - " + "sell, "
+
+[s11supertrend, s11direction] = request.security(s11, "3M", ta.supertrend(3, 10))
+if s11direction < 0 and s11direction[1] > 0 
+    message := message + s11 + " - chart 3M - " + "buy, "
+else if s11direction > 0 and s11direction[1] < 0 
+    message := message + s11 + " - chart 3M - " + "sell, "
+    
+[s11supertrend3, s11direction3] = request.security(s11, "6M", ta.supertrend(3, 10))
+if s11direction3 < 0 and s11direction3[1] > 0 
+    message := message + s11 + " - chart 6M - " + "buy, "
+else if s11direction3 > 0 and s11direction3[1] < 0 
+    message := message + s11 + " - chart 6M - " + "sell, "
+
+[s11supertrend6, s11direction6] = request.security(s11, "12M", ta.supertrend(3, 10))
+if s11direction6 < 0 and s11direction6[1] > 0 
+    message := message + s11 + " - chart 12M - " + "buy, "
+else if s11direction6 > 0 and s11direction6[1] < 0 
+    message := message + s11 + " - chart 12M - " + "sell, "
+
+[s12supertrend, s12direction] = request.security(s12, "3M", ta.supertrend(3, 10))
+if s12direction < 0 and s12direction[1] > 0 
+    message := message + s12 + " - chart 3M - " + "buy, "
+else if s12direction > 0 and s12direction[1] < 0 
+    message := message + s12 + " - chart 3M - " + "sell, "
+    
+[s12supertrend3, s12direction3] = request.security(s12, "6M", ta.supertrend(3, 10))
+if s12direction3 < 0 and s12direction3[1] > 0 
+    message := message + s12 + " - chart 6M - " + "buy, "
+else if s12direction3 > 0 and s12direction3[1] < 0 
+    message := message + s12 + " - chart 6M - " + "sell, "
+
+[s12supertrend6, s12direction6] = request.security(s12, "12M", ta.supertrend(3, 10))
+if s12direction6 < 0 and s12direction6[1] > 0 
+    message := message + s12 + " - chart 12M - " + "buy, "
+else if s12direction6 > 0 and s12direction6[1] < 0 
+    message := message + s12 + " - chart 12M - " + "sell, "
+
+[s13supertrend, s13direction] = request.security(s13, "3M", ta.supertrend(3, 10))
+if s13direction < 0 and s13direction[1] > 0 
+    message := message + s13 + " - chart 3M - " + "buy, "
+else if s13direction > 0 and s13direction[1] < 0 
+    message := message + s13 + " - chart 3M - " + "sell, "
+    
+[s13supertrend3, s13direction3] = request.security(s13, "6M", ta.supertrend(3, 10))
+if s13direction3 < 0 and s13direction3[1] > 0 
+    message := message + s13 + " - chart 6M - " + "buy, "
+else if s13direction3 > 0 and s13direction3[1] < 0 
+    message := message + s13 + " - chart 6M - " + "sell, "
+
+[s13supertrend6, s13direction6] = request.security(s13, "12M", ta.supertrend(3, 10))
+if s13direction6 < 0 and s13direction6[1] > 0 
+    message := message + s13 + " - chart 12M - " + "buy, "
+else if s13direction6 > 0 and s13direction6[1] < 0 
+    message := message + s13 + " - chart 12M - " + "sell, "
+
+if message != ""
+    alert(message, alert.freq_once_per_bar)
